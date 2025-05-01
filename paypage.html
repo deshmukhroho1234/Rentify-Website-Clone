@@ -146,35 +146,11 @@
         </form>
       </div>
       <div class="rhs">
-        <form action="" id="rhsform">
-          <br /><br /><br />
-          <label for="" class="pay">Payment Details</label>
-          <input
-            type="text"
-            placeholder="Name of Account Holder"
-            class="s7"
-          /><br />
-
-          <input type="number" placeholder="Card No." class="s8" /><br /><input
-            type="number"
-            placeholder="Cvv"
-            minlength="3"
-            maxlength="3"
-            min="111"
-            max="999"
-            class="s9"
-          /><br />
-          <input
-            type="number"
-            min="1"
-            max="12"
-            placeholder="Exp Month"
-            class="s10"
-          />
-          <input type="number" placeholder="Exp Year" min="1995" class="s11" />
-
-          <input type="submit" class="sub" id="subbtn" />
-        </form>
+        <div style="text-align: center; margin-top: 50px;">
+          <label for="" class="pay">Scan QR to Pay</label><br><br>
+          <img src="upi_1746079451876.png" alt="QR Code" style="width: 250px; height: 250px;" />
+          <p style="margin-top: 1rem; font-weight: bold;">Scan with UPI App to complete your payment</p>
+        </div>
       </div>
     </div>
   </body>
@@ -217,22 +193,6 @@
       alert("Please enter the City");
     } else if (data5.value == "") {
       alert("Please enter the Pin-Code");
-    } else if (data8.value == "") {
-      alert("Please enter the Account Holder Name");
-    } else if (data8.value == "") {
-      alert("Please enter the Card No.");
-    } else if (data8.value.length < 11 || data8.innerText.value > 11) {
-      alert("Please check the Card No.");
-    } else if (data9.value == "") {
-      alert("Please enter the Phone.No");
-    } else if (data9.value.length < 3 || data9.value.length > 3) {
-      alert("Please enter correct Cvv");
-    } else if (data10.value < 1 && data10.value > 12) {
-      alert("Please Check Exp Month");
-    } else if (data11.value == "") {
-      alert("Please Enter Exp year");
-    } else if (data11.value < 2022) {
-      alert("Your Card is Expired");
     } else {
       console.log("S");
       window.location.href = "cvv.html";
